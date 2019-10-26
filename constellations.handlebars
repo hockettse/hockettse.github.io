@@ -1,0 +1,49 @@
+<nav class="horizontal-menu">
+    <img class="logo" src="images/MoreSpace.jpg">
+    <a href="/">Home</a>
+    <a href="/stars">Stars</a>
+    <a href="/constellations">Constellations</a>
+    <a href="/planets">Planets</a>
+    <a href="/galaxy">Galaxies</a>
+</nav>
+<form class="Add">
+    <fieldset>
+        <legend> Would you like to add a new constellation? </legend>
+        <label> Name:
+            <input type="text" name="name" id="name" required minlength="1" maxlength="16" width="17" spellcheck="true">
+        </label>
+        <label>Number of Bright Stars:
+            <input type="text" name="bStars" id="bStars" required minlength="1" maxlength="16" width="17" spellcheck="true">
+        </label>
+        <label>Zodiac Constellation:
+            <input type="number" name="zodiac" id="zodiac" required width ="10">
+        </label>
+        <label>IAU Abbreviation:
+            <input type="number" name="IAU" id="IAU" required width = "5">
+        </label>
+        <label>NASA Abbreviation:
+            <input type="number" name="NASA" id="NASA" required width = "5">
+        </label>
+        <button type="button" class="addStarButton" id="addStarButton">Add Star</button>
+    </fieldset>
+</form>
+
+<br>
+
+<div class="outerTable">
+    <table class="resultTable">
+        <thead>
+        <tr>
+            <th>ConstellationID</th>
+            <th>Name</th>
+            <th>Number of Bright Stars</th>
+            <th>Zodiac Constellation</th>
+            <th>IAU Abbreviation</th>
+            <th>NASA Abbreviation</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>

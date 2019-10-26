@@ -1,0 +1,54 @@
+<div class="outer-content">
+    <img id="slideShow" name = "slide" class="center" alt="theSlides">
+    <h2 id="theKing"> Digital Space Exploration </h2>
+    <p> For as long as humans have been able, they have looked toward <br>
+        the skies to study the myriad of celestial bodies visible to them. <br>
+        We have used them for measuring time, navigation, and looking for <br>
+        a source of our own existence. This project outline is for a <br>
+        Digital Space Exploration Application. Users will be able to explore <br>
+        and learn how the Stars, Constellations, Planets, Planetary Systems, <br>
+        and Galaxies are connected and spark wonder about our universe. Our <br>
+        main objective is to build a user friendly, fun, and exciting way to <br>
+        help those that are curious about exploring the universe we are all <br>
+        a citizen of.</p>
+</div>
+
+<nav class="horizontal-menu">
+    <img class="logo" src="images/MoreSpace.jpg">
+    <a href="/">Home</a>
+    <a href="/stars">Stars</a>
+    <a href="/">Constellations</a>
+    <a href="/">Planets</a>
+    <a href="/">Planetary Systems</a>
+    <a href="/">Galaxies</a>
+</nav>
+
+<script>
+    var i =0;
+    var images = [];
+    var time = 2500;
+
+    images[0] = "../images/C1.jpg";
+    images[1] = "../images/C2.jpg";
+    images[2] = "../images/C3.jpg";
+    images[3] = "../images/C4.jpg";
+    images[4] = "../images/C5.jpg";
+    images[5] = "../images/C6.jpg";
+    images[6] = "../images/C7.jpg";
+    images[7] = "../images/C8.jpg";
+    images[8] = "../images/C9.jpg";
+
+    function slideshow(){
+        document.slide.src = images[i];
+        if(i< images.length -1){
+            i++
+        }
+        else{
+            i =0;
+        }
+        setTimeout("slideshow()",time);
+    }
+
+    window.onload = slideshow;
+
+</script>

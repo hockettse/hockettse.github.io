@@ -1,0 +1,41 @@
+<div class="outerTitle">
+    <div class="innerTitle">
+        <h2>Simple Workout Tracker</h2>
+        <p>Edit a workout below</p>
+    </div>
+</div>
+
+<form id="EditWorkout">
+        <fieldset>
+            <legend>Edit Workout and Click Confirm Change Button </legend>
+                    <label> Name:
+                        <input type="text" name="name" id="name" value="{{name}}" required minlength="1" maxlength="16" size="17" spellcheck="true">
+                    </label>
+                    <label>Reps:
+                        <input type="number" name="reps" id="reps" value="{{reps}}" required>
+                    </label>
+                    <label>Weight:
+                        <input type="number" name="weight" id="weight" value="{{weight}}" required>
+                    </label>
+                    <label>Date:
+                        <input type="date" name="date" id="date" type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" value="{{date}}" required>
+                    </label>
+                    <label>Unit:
+                        <select name="lbs" id="lbs">
+                            {{#if lbs}}
+                                <option value="1" selected>Lbs</option>
+                                <option value="0">Kgs</option>
+                            {{else}}
+                                <option value="1">Lbs</option>
+                                <option value="0" selected>Kgs</option>
+                            {{/if}}
+                        </select>
+                    </label>
+                  	<button type="button" class="updateWorkoutButton" id="updateWorkout">Confirm Change</button>
+                    <input type="hidden" name="id" id="id" value="{{id}}">
+        </fieldset>
+</form>
+<br>
+<button><a id="homeBase" href="/">Back to Main Page</a></button>
+
+<script src="js/editRow.js"></script>

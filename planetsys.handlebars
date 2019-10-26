@@ -1,0 +1,47 @@
+<nav class="horizontal-menu">
+    <img class="logo" src="images/MoreSpace.jpg">
+    <a href="/">Home</a>
+    <a href="/stars">Stars</a>
+    <a href="/constellations">Constellations</a>
+    <a href="/planets">Planets</a>
+    <a href="/planetsys">Planetary Systems</a>
+    <a href="/galaxy">Galaxies</a>
+</nav>
+
+<form class="Add">
+    <fieldset>
+        <legend> Would you like to add a new galaxy? </legend>
+        <label> Name:
+            <input type="text" name="name" id="name" required minlength="1" maxlength="16" width="17" spellcheck="true">
+        </label>
+        <label>Classification:
+            <input type="text" name="class" id="class" required minlength="1" maxlength="16" width="17" spellcheck="true">
+        </label>
+        <label>Mass:
+            <input type="number" name="mass" id="mass" required width ="10">
+        </label>
+        <label>Diameter:
+            <input type="number" name="age" id="age" required width = "5">
+        </label>
+        <button type="button" class="addStarButton" id="addStarButton">Add Star</button>
+    </fieldset>
+</form>
+
+<br>
+
+<div class="outerTable">
+    <table class="resultTable">
+        <thead>
+        <tr>
+            <th>GalaxyID</th>
+            <th>Name</th>
+            <th>Classification</th>
+            <th>Mass</th>
+            <th>Diameter</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
